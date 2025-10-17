@@ -11,7 +11,7 @@ public class Calculator {
         sc.nextLine();
         System.out.print("Enter the num2 :");
         int num2 = sc.nextInt();
-        sc.nextLine();
+        sc.nextLine(); 
         switch (operator) {
             case "+":
                 System.out.println("The addition of 2 numbers is " + (num1 + num2));
