@@ -1,11 +1,10 @@
-public class InvertedNumbersPyramid {
+public class AlphabeticTriangle {
     public static void main(String[] args) {
         for (int i = 1; i <= 5; i++) {
-            for (int space = 0; space <= i; space++) {
+            for (int space = 5; space >= i; space--) {
                 System.out.print(" ");
             }
-            int number = (9 - (2 * i) + 2);
-            for (int j = number; j >= 1; j--) {
+            for (char j = 'A'; j < 'A' + (2 * i) - 1; j++) {
                 System.out.print(j);
             }
             System.out.println();
