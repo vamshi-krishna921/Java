@@ -12,8 +12,8 @@ public class Rhombus {
             System.out.println();
         }
         // * Lower Part
-        for (int i = 2; i >= 1; i--) {
-            for (int space = n ; space >= i; space--) {
+        for (int i = n-1; i >= 1; i--) {
+            for (int space = i ; space <= n; space++) {
                 System.out.print(" ");
             }
             for (int j = (2 * i + 1); j >= n; j--) {
