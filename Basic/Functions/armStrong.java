@@ -13,11 +13,7 @@ public class armStrong {
             sum = sum + (int) Math.pow(digit, length);
             num /= 10;
         }
-        if (original == sum) {
-            return true;
-        } else {
-            return false;
-        }
+        return original == sum;
     }
 
     public static void main(String[] args) {
