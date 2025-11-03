@@ -21,11 +21,12 @@ public class armStrong {
         System.out.print("Enter the number : ");
         int n = sc.nextInt();
         if (n > 0) {
-            if (isArmstrong(n)) {
-                System.out.println(n + " is armstrong number.");
-            } else {
-                System.out.println(n + " is not a armstrong number.");
-            }
+            // if (isArmstrong(n)) {
+            // System.out.println(n + " is armstrong number.");
+            // } else {
+            // System.out.println(n + " is not a armstrong number.");
+            // }
+            System.out.println(n + (isArmstrong(n) ? " is a armstrong number" : " not a armstrong number"));
         } else {
             System.out.println("Enter the number > 0.");
         }
