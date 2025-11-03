@@ -2,24 +2,30 @@ import java.util.Scanner;
 
 public class RangePerfect {
     // Function declaration
-    static boolean isPerfect(int num) {
+    static int isPerfect(int num) {
         int sum = 0;
         for (int i = 1; i <= num / 2; i++) {
             if (num % i == 0) {
                 sum += i;
             }
         }
-        return sum == num;
+        if (sum == num) {
+            return num;
+        }else{
+            return -1;
+        }
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number: ");
-        int num = sc.nextInt();
-        if (isPerfect(num)) {
-            System.out.println(num + " is a perfect number.");
-        } else {
-            System.out.println(num + " is not a perfect number.");
+        System.out.print("Enter the start number: ");
+        int start = sc.nextInt();
+        System.out.print("Enter the end number: ");
+        int end = sc.nextInt();
+        for (int i =start; i <= end; i++) {
+            if (isPerfect(i) != -1) {
+                System.out.print(i + " ");
+            }
         }
     }
 }
