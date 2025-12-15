@@ -1,13 +1,14 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MergeArray {
 
-    static int[] mergeArray(int arr1[], int arr2[]){
+    static int[] mergeArray(int arr1[], int arr2[]) {
         int[] merArray = new int[arr1.length + arr2.length];
         for (int i = 0; i < arr1.length; i++) {
             merArray[i] = arr1[i];
         }
-         for (int i = 0; i < arr2.length; i++) {
+        for (int i = 0; i < arr2.length; i++) {
             merArray[i + arr1.length] = arr2[i];
         }
         return merArray;
@@ -33,5 +34,29 @@ public class MergeArray {
         for (int i = 0; i < mergedArray.length; i++) {
             System.out.print(mergedArray[i] + " ");
         }
+
+        // * Using Arrays.copyOf */
+        int[] arr3 = { 1, 2, 3, 4, 5 };
+        int[] arr4 = { 6, 7, 8, 9, 10 };
+        int[] mergedArr = Arrays.copyOf(arr3, arr3.length + arr4.length);
+        System.out.println("The Arrays.copyOf are");
+        for (int i = 0; i < arr4.length; i++) {
+            mergedArr[arr3.length + i] = arr4[i];
+        }
+        for (int i = 0; i < mergedArr.length; i++) {
+            System.out.print(mergedArr[i] + " ");
+        }
+
+        // * Using System.arraycopy */
+        int[] arr5 = { 1, 2, 3, 4, 5 };
+        int[] arr6 = { 6, 7, 8, 9, 10 };
+        int[] mergeArray1 = new int[arr5.length + arr6.length];
+        System.arraycopy(arr5, 0, mergeArray1, 0, arr5.length);
+        System.arraycopy(arr6, 0, mergeArray1, arr5.length, arr6.length);
+        System.out.println("The System.arraycopy are");
+        for (int i = 0; i < mergeArray1.length; i++) {
+            System.out.print(mergeArray1[i] + " ");
+        }
+
     }
 }
