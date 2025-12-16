@@ -46,7 +46,6 @@ public class MergeArray {
         for (int i = 0; i < mergedArr.length; i++) {
             System.out.print(mergedArr[i] + " ");
         }
-
         // * Using System.arraycopy */
         int[] arr5 = { 1, 2, 3, 4, 5 };
         int[] arr6 = { 6, 7, 8, 9, 10 };
