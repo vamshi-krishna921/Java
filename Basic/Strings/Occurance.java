@@ -9,7 +9,7 @@ public class Occurance {
             char ch = str.charAt(i);
             if (str.indexOf(ch) != i || ch == ' ') continue;
             int originalLength = str.length();
-            String modified = str.replace(ch + "", "");
+            String modified = str.replaceAll(ch + "", "");
             int count = originalLength - modified.length();
             System.out.println(ch + " occurred for " + count);
         }
