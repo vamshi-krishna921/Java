@@ -2,24 +2,24 @@ import java.util.Scanner;
 
 public class Bubblesort {
 
-    //* Non-optimized code
+    // * Non-optimized code
     // static void sortedArray(int[] arr) {
-    //     for (int i = 0; i < arr.length - 1; i++) {
-    //         for (int j = 0; j < arr.length - i - 1; j++) {
-    //             if (arr[j] > arr[j + 1]) {
-    //                 int temp = arr[j];
-    //                 arr[j] = arr[j + 1];
-    //                 arr[j + 1] = temp;
-    //             }
-    //         }
-    //     }
-    //     System.out.print("The sorted array is : ");
-    //     for (int i = 0; i < arr.length; i++) {
-    //         System.out.print(arr[i] + " ");
-    //     }
+    // for (int i = 0; i < arr.length - 1; i++) {
+    // for (int j = 0; j < arr.length - i - 1; j++) {
+    // if (arr[j] > arr[j + 1]) {
+    // int temp = arr[j];
+    // arr[j] = arr[j + 1];
+    // arr[j + 1] = temp;
+    // }
+    // }
+    // }
+    // System.out.print("The sorted array is : ");
+    // for (int i = 0; i < arr.length; i++) {
+    // System.out.print(arr[i] + " ");
+    // }
     // }
 
-    //* Optimized code
+    // * Optimized code
     static void sortedArray(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             boolean swapped = false;
