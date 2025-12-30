@@ -27,18 +27,35 @@ public class FIndUnionOfSortedArray {
         int s1 = arr1.length;
         int s2 = arr2.length;
         while (i < s1 && j < s2) {
-            if (arr1[i] <= arr2[j]) {
-                if (!list.contains(arr1[i])) {
+            if (arr1[i] < arr2[j]) {
+                if (list.isEmpty() || list.get(list.size() - 1) != arr1[i]) {
                     list.add(arr1[i]);
-                    i++;
                 }
-            }
-            if (arr2[j] <= arr1[i]) {
-                if (!list.contains(arr2[j])) {
+                i++;
+            } else if (arr1[i] > arr2[j]) {
+                if (list.isEmpty() || list.get(list.size() - 1) != arr2[j]) {
                     list.add(arr2[j]);
-                    j++;
                 }
+                j++;
+            } else {
+                if (list.isEmpty() || list.get(list.size() - 1) != arr2[j]) {
+                    list.add(arr2[j]);
+                }
+                j++;
+                i++;
             }
+        }
+        while (i < s1) {
+            if (list.isEmpty() || list.get(list.size() - 1) != arr1[i]) {
+                list.add(arr1[i]);
+            }
+            i++;
+        }
+        while (j < s2) {
+            if (list.isEmpty() || list.get(list.size() - 1) != arr2[j]) {
+                list.add(arr2[j]);
+            }
+            j++;
         }
         for (Integer elem : list) {
             System.out.print(elem + " ");
