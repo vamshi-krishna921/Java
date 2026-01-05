@@ -27,7 +27,7 @@ public class setMatrixZeros {
     // return;
     // }
 
-    // * Better soln achieved by marking rows and cols
+    // * Better soln achieved by marking rows and cols & Optimal soln
     static void setToZeros(int[][] arr, boolean[] markRow, boolean[] markCol) {
         for (int i = 0; i < markRow.length; i++) {
             for (int j = 0; j < markCol.length; j++) {
