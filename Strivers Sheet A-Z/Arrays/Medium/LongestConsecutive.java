@@ -24,6 +24,7 @@ public class LongestConsecutive {
         // }
         // maxLen = Math.max(maxLen, count);
         // }
+        //TODO Optimal using HashSet
         HashSet<Integer> set = new HashSet<>();
         for (int i = 0; i < arr.length; i++) {
             set.add(arr[i]);
@@ -43,8 +44,6 @@ public class LongestConsecutive {
 
         return maxLen;
     }
-
-    // TODO Optimal soln using Set
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
