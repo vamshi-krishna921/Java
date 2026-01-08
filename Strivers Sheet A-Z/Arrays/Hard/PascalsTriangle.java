@@ -40,7 +40,7 @@ public class PascalsTriangle {
         // }
         // result.add(temp);
         // }
-        // * Optimized solution
+        // * Optimized solution using the 2nd formula
         for (int i = 0; i < n; i++) {
             ArrayList<Integer> temp = new ArrayList<>();
             int ans = 1;
