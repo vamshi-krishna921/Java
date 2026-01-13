@@ -11,7 +11,7 @@ public class MergeInterval {
         list.add(intervals[0]);
         for(int i = 1; i < intervals.length; i++) {
             int[] top = list.get(list.size() - 1);
-            if(top[1] >= intervals[i][0]) {
+            if(intervals[i][0] <= top[1] ) {
                 top[1] = Math.max(intervals[i][1], top[1]);
             } else {
                 list.add(intervals[i]);
