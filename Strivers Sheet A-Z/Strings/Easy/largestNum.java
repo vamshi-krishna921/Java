@@ -19,6 +19,5 @@ public class largestNum {
         for (int i = 0; i < result.length(); i++) {
             System.out.print(num.charAt(i));
         }
-
     }
 }
