@@ -35,6 +35,6 @@ public class ATOI {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the string: ");
         String str = sc.next();
-        System.out.print("The integer is : " + StringToInt(str));
+        System.out.print("The integer value is : " + StringToInt(str));
     }
 }
