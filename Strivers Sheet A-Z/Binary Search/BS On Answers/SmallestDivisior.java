@@ -16,8 +16,8 @@ public class SmallestDivisior {
         // return i;
         // }
         // }
-        int ans = -1;
         // TODO Optimal
+        int ans = -1;
         int low = 1, high = max;
         while (low <= high) {
             int mid = low + (high - low) / 2;
