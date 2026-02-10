@@ -1,17 +1,6 @@
 import java.util.Scanner;
 
-public class MissingKthNum {
-    static int search(int arr[], int t){
-        //TODO Optimal
-        for (int elem: arr) {
-            if (elem <= t) {
-                t++;
-            }else{
-                return t;
-            }
-        }
-        return t;
-    }
+public class AggressiveCows {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the size of array:  ");
@@ -20,7 +9,7 @@ public class MissingKthNum {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextInt();
         }
-        System.out.print("Enter the target: ");
+        System.out.print("Enter the threshold: ");
         int t = sc.nextInt();
         System.out.print("The result is " + search(arr, t));
     }
