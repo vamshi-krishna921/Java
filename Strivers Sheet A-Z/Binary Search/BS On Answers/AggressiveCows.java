@@ -48,7 +48,6 @@ public class AggressiveCows {
             if (cowsSettle(arr, mid, k)) {
                 ans = mid;
                 low = mid + 1;
-                ;
             } else {
                 high = mid - 1;
             }
