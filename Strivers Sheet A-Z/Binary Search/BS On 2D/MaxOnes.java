@@ -1,18 +1,46 @@
 import java.util.Scanner;
 
 public class MaxOnes {
+
+    static int findMax(int[] matrix, int rows){
+        int low = 0, high = matrix.length-1;
+        int ans = matrix.length;
+        while (low<=high) {
+            int mid = low + (high - low)/2;
+            if (matrix[mid] == 1) {
+                ans = mid;
+                high = mid -1;
+            }else{
+                low = mid + 1;
+            }
+        }
+        return ans;
+    }
+
     static int findOnes(int[][] matrix, int rows, int cols) {
         int maxCount = 0, index = -1;
+
+        // ! Brute
+        // for (int i = 0; i < rows; i++) {
+        // int count = 0;
+        // for (int j = 0; j < cols; j++) {
+        // if (matrix[i][j] == 1) {
+        // count++;
+        // }
+        // }
+        // if (count>maxCount) {
+        // maxCount = count;
+        // index = i;
+        // }
+        // }
+
+        // TODO Optimal
+        int ans = 0;
         for (int i = 0; i < rows; i++) {
-            int count = 0;
-            for (int j = 0; j < cols; j++) {
-                if (matrix[i][j] == 1) {
-                    count++;
-                }
-            }
-            if (count>maxCount) {
-                maxCount = count;
-                index = i;
+            ans = rows - findMax(matrix[i], rows);
+            if (ans > maxCount) {
+                maxCount = ans;
+                index = i + 1;
             }
         }
         return index;
