@@ -105,6 +105,75 @@ public class LinkedList {
         }
     }
 
+    // ? Deletion
+    // * delete 1st node
+    public void deleteFirst() {
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        if (head == tail) {
+            head = tail = null;
+            return;
+        }
+        node temp = head;
+        head = head.next;
+        temp.next = null;
+    }
+
+    // * Delete last node
+    public void deleteLast() {
+        if (tail == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        if (head == tail) {
+            head = tail = null;
+            return;
+        }
+        node temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+        tail = temp;
+    }
+
+    // * Delete node at any position
+    public void deleteAtPos(int pos) {
+        if (head == null) {
+            System.out.print("List is empty");
+            return;
+        }
+        if (pos == 1) {
+            if (head == tail) {
+                head = tail = null;
+            } else {
+                node temp = head;
+                head = head.next;
+                temp.next = null;
+            }
+            return;
+        }
+        int count = 1;
+        node temp = head;
+        node prev = temp;
+        while (count < pos && temp != null) {
+            prev = temp;
+            temp = temp.next;
+            count++;
+        }
+        if (temp == null) {
+            System.out.println("Position out of bounds");
+            return;
+        }
+        prev.next = temp.next;
+        if (temp == tail) {
+            tail = prev;
+        }
+        temp.next = null;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         LinkedList ll = new LinkedList();
@@ -115,6 +184,11 @@ public class LinkedList {
             System.out.println("4. Exit");
             System.out.println("5. Add at first");
             System.out.println("6. Add elem at last");
+            System.out.println("7. Ad elem at any position");
+            System.out.println("Deletion");
+            System.out.println("8. Delete first node");
+            System.out.println("9. Delete last node");
+            System.out.println("10. Delete node at any position");
 
             int x = sc.nextInt();
             switch (x) {
@@ -149,6 +223,17 @@ public class LinkedList {
                     System.out.print("Enter the elem: ");
                     val = sc.nextInt();
                     ll.addAtPos(pos, val);
+                    break;
+                case 8:
+                    ll.deleteFirst();
+                    break;
+                case 9:
+                    ll.deleteLast();
+                    break;
+                case 10:
+                    System.out.print("Enter the pos: ");
+                    pos = sc.nextInt();
+                    ll.deleteAtPos(pos);
                     break;
                 default:
                     break;
