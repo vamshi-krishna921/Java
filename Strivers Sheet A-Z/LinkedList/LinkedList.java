@@ -14,10 +14,12 @@ public class LinkedList {
     // ? Head and tail
     public static node head;
     public static node tail;
+    public static int size;
 
     // *Add node one after another (Sequence)
     public void addNode(int data) {
         node newNode = new node(data);
+        // size++;
         if (head == null) {
             head = tail = newNode;
             return;
@@ -57,6 +59,7 @@ public class LinkedList {
     // * Add first
     public static void addFirst(int data) {
         node newNode = new node(data);
+        size++;
         if (head == null) {
             head = tail = newNode;
             return;
@@ -68,6 +71,7 @@ public class LinkedList {
     // * Add Last
     public static void addLast(int data) {
         node newNode = new node(data);
+        size++;
         if (head == null) {
             head = tail = newNode;
             return;
@@ -79,6 +83,7 @@ public class LinkedList {
     // * Add at position
     public static void addAtPos(int pos, int data) {
         node newNode = new node(data);
+        size++;
         if (pos == 1) {
             newNode.next = head;
             head = newNode;
@@ -174,6 +179,38 @@ public class LinkedList {
         temp.next = null;
     }
 
+    // * Search in linkedList(iterative)
+    public static int iterativeSearch(int key) {
+        node temp = head;
+        int pos = 0;
+        if (head.data == key) {
+            return pos;
+        }
+        while (temp != null) {
+            if (temp.data == key) {
+                return pos;
+            } else {
+                temp = temp.next;
+                pos++;
+            }
+        }
+        return -1;
+    }
+
+    // * Reverse a linkedlist
+    public static void revList() {
+        node prev = null;
+        node cur = tail = head;
+        node next;
+        while (cur != null) {
+            next = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = next;
+        }
+        head = prev;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         LinkedList ll = new LinkedList();
@@ -189,6 +226,8 @@ public class LinkedList {
             System.out.println("8. Delete first node");
             System.out.println("9. Delete last node");
             System.out.println("10. Delete node at any position");
+            System.out.println("11. Search in linkedList");
+            System.out.println("12. Reverse linkedList");
 
             int x = sc.nextInt();
             switch (x) {
@@ -234,6 +273,14 @@ public class LinkedList {
                     System.out.print("Enter the pos: ");
                     pos = sc.nextInt();
                     ll.deleteAtPos(pos);
+                    break;
+                case 11:
+                    System.out.print("Enter the key: ");
+                    int key = sc.nextInt();
+                    System.out.println("The elem is found at: " + ll.iterativeSearch(key));
+                    break;
+                case 12:
+                    ll.revList();
                     break;
                 default:
                     break;
