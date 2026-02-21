@@ -211,6 +211,35 @@ public class LinkedList {
         head = prev;
     }
 
+    // * Palindrome check
+    public static boolean checkPalindrome() {
+        node slow = head;
+        node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        node prev = null;
+        node cur = slow;
+        node next;
+        while (cur != null) {
+            next = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = next;
+        }
+        node left = head;
+        node right = prev;
+        while (right != null) {
+            if (left.data != right.data) {
+                return false;
+            }
+            left = left.next;
+            right = right.next;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         LinkedList ll = new LinkedList();
@@ -228,6 +257,7 @@ public class LinkedList {
             System.out.println("10. Delete node at any position");
             System.out.println("11. Search in linkedList");
             System.out.println("12. Reverse linkedList");
+            System.out.println("13. Check Palindrome");
 
             int x = sc.nextInt();
             switch (x) {
@@ -281,6 +311,9 @@ public class LinkedList {
                     break;
                 case 12:
                     ll.revList();
+                    break;
+                case 13:
+                    ll.checkPalindrome();
                     break;
                 default:
                     break;
