@@ -319,6 +319,5 @@ public class LinkedList {
                     break;
             }
         }
-
     }
 }
