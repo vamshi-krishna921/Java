@@ -13,6 +13,7 @@ public class RemoveLoop {
         if (loopFound == false) {
             return;
         }
+        slow = head;
         if (slow == fast) {
             while (fast.next != slow) {
                 fast = fast.next;
@@ -20,7 +21,6 @@ public class RemoveLoop {
             fast.next = null;
             return;
         }
-        slow = head;
         ListNode prev = null;
         while (slow != fast) {
             prev = fast;
