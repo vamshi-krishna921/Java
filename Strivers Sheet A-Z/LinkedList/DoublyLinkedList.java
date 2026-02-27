@@ -57,7 +57,7 @@ public class DoublyLinkedList {
             current.next = temp;
             current = current.prev;
         }
-        // Swap head and tail
+        // Swap head and tail 
         if (temp != null) {
             tail = head;
             head = temp.prev;
