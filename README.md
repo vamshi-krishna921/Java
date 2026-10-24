@@ -1,12 +1,10 @@
 # 🚀 Ultimate Data Structures & Algorithms (DSA)
 
-> **Welcome!** Whether you're preparing for tier-1 tech giants like **Google, Amazon, Meta, Microsoft, Apple, Uber**, or preparing for high-volume campus recruitment like **TCS NQT, Infosys, Wipro, Accenture**, this repository is designed to be your **friendly, intuitive, humanized companion**.
+> **Welcome!** Whether you're preparing for tier-1 tech giants like **Google, Amazon, Meta, Microsoft, Apple, Uber**, or preparing for high-volume campus recruitment like **TCS NQT, Infosys, Wipro, Accenture**, this repository is designed to be your **friendly, intuitive,   companion**.
 
 ---
 
-## 💡 Why "Humanized"?
-
-DSA can feel mechanical and intimidating with dry math formulas and abstract pseudocode. **Humanized documentation** breaks down complex concepts into everyday analogies, visual mental models, and intuitive step-by-step logic before writing a single line of code.
+DSA can feel mechanical and intimidating with dry math formulas and abstract pseudocode. **  documentation** breaks down complex concepts into everyday analogies, visual mental models, and intuitive step-by-step logic before writing a single line of code.
 
 ### 🌟 Core Philosophy:
 1. **Analogy First**: Understand *why* a pattern works using real-world intuition (e.g., Two Pointers as two runners on a track).
