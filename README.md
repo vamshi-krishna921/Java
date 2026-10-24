@@ -1,4 +1,4 @@
-# 🚀 Ultimate Humanized Data Structures & Algorithms (DSA) Blueprint
+# 🚀 Ultimate Data Structures & Algorithms (DSA)
 
 > **Welcome!** Whether you're preparing for tier-1 tech giants like **Google, Amazon, Meta, Microsoft, Apple, Uber**, or preparing for high-volume campus recruitment like **TCS NQT, Infosys, Wipro, Accenture**, this repository is designed to be your **friendly, intuitive, humanized companion**.
 
